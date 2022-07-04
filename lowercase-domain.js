@@ -12,18 +12,38 @@
  */
 function lowerCaseDomain(emailList){
 
-    return lowercaseList
+    const lowerCaseList = []
+
+    for (let email of emailList){
+        email.toLowerCase()
+        lowerCaseList.push(email.toLowerCase())
+    }
+
+    return lowerCaseList
 
 }
 
 // test cases
 
 console.log(
-	lowercaseDomains(["academy.tech", "GITHUB.COM", "StackOverflow.com", "mOzIlLa.OrG"]),
+	lowerCaseDomain(["academy.tech", "GITHUB.COM", "StackOverflow.com", "mOzIlLa.OrG"]),
 	["academy.tech", "github.com", "stackoverflow.com", "mozilla.org"]
 )
 
 console.log(
-	lowercaseDomains(["m1a.tech", "example.cO.UK", "HTTPS://JavaScript.Info"]),
+	lowerCaseDomain(["m1a.tech", "example.cO.UK", "HTTPS://JavaScript.Info"]),
 	["m1a.tech", "example.co.uk", "https://javascript.info"]
 )
+
+/*function body pseud code
+
+let lowerCaseList = []
+
+for each email in the input array, execute the following {
+    email to lower case
+    lowerCaseList.push() email
+}
+
+return lowerCaseList
+
+*/
