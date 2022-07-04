@@ -23,14 +23,14 @@ function pokemonType(Pokemon){
 
     for (let species of Pokemon){
 
-        speciesDescription = `${species.name} is a ${species.type} Pokémon.`
+        speciesDescription = `${species.name} is a ${species.type} type Pokémon.`
 
         pokemonDescription.push(speciesDescription)
 
     }
-
-    return PokemonDescription
+    //console.log(pokemonDescription)
+    return pokemonDescription
 
 }
 
-pokemonType([{ name: 'Bulbasaur', type: 'Grass' }, { name: 'Charmander', type: 'Fire' }, { name: 'Squirtle', type: 'Water' }])
+console.log(pokemonType([{ name: 'Bulbasaur', type: 'Grass' }, { name: 'Charmander', type: 'Fire' }, { name: 'Squirtle', type: 'Water' }]))
